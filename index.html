@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lee Maddox – Creative Copywriter & Screenwriter</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Plus Jakarta Sans', Arial, sans-serif;
+  background:#f7f5f2;
+}
+
+nav {
+  position:fixed;
+  top:0; left:0; right:0;
+  height:60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 48px;
+  background:#f7f5f2;
+  border-bottom:1px solid #e0ddd8;
+  z-index:1000;
+}
+
+.nav-links {
+  display:flex;
+  gap:32px;
+  list-style:none;
+}
+
+.nav-links a {
+  text-decoration:none;
+  color:#99948f;
+  font-size:13px;
+}
+
+.nav-links a:hover {
+  color:#111;
+}
+
+.nav-hamburger {
+  display:none;
+  flex-direction:column;
+  width:24px;
+  height:18px;
+  justify-content:space-between;
+  background:none;
+  border:none;
+}
+
+.nav-hamburger span {
+  height:2px;
+  background:#111;
+}
+
+@media (max-width:640px){
+  .nav-hamburger { display:flex; }
+
+  .nav-links {
+    display:none;
+    position:fixed;
+    top:60px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    background:#f7f5f2;
+    padding:20px;
+  }
+
+  .nav-links.open {
+    display:flex;
+    z-index:9999;
+  }
+}
+
+.hero {
+  padding-top:120px;
+  text-align:center;
+}
+
+.hero h1 {
+  font-size:48px;
+  max-width:900px;
+  margin:0 auto;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div>Lee Maddox</div>
+
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/what-i-do.html">What I do</a></li>
+    <li><a href="/screenwriting.html">Screenwriting</a></li>
+    <li><a href="/contact.html">Get in touch</a></li>
+  </ul>
+
+  <button class="nav-hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="hero">
+  <h1>Find the truth, build the story, then choose the words to carry it.</h1>
+</div>
+
+<script>
+function toggleMenu(){
+  document.querySelector('.nav-links').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
